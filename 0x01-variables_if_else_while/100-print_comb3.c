@@ -1,31 +1,39 @@
 #include <stdio.h>
 /**
-  * main -Entry point
-  * Description: 'Print two digit numbers'
-  * Return: always 0
-*/
+ * main - Entry point
+ * Description: 'Print two single digits with comma and space'
+ * Return: always 0
+ */
 int main(void)
 {
-	int i, j;
+	int i, k = '0', j;
 
-	for (i = 0; i < 10; i++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		for (j = i + 1; j < 10; j++)
+		for (j = k; j <= '9'; j++)
 		{
-			int num = i * 10 + j;
-
-			if (num != 1 && num != 10)
+			if (i != j)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
+				putchar(i);
+				putchar(j);
 			}
-			if (i < 8 || j < 9)
+			if (i == j)
+			{
+				continue;
+			}
+			if (i == '8' && j == '9')
+			{
+				break;
+			}
+			else
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
+		k++;
 	}
 	putchar('\n');
 	return (0);
 }
+
