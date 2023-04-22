@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
-  * main - Entry point
-  * Description: 'Print combination of three digits'
-  * Result: always 0
-*/
+ * main-progrtam entry point
+ * Return:0 success, non zero fail
+ */
 int main(void)
 {
 	int m, i, j;
@@ -18,7 +17,7 @@ int main(void)
 				{
 					putchar(i);
 					putchar(j);
-					putchar(m);
+putchar(m);
 					if (i == '7' && j == '8' && m == '9')
 					{
 						break;
@@ -33,6 +32,6 @@ int main(void)
 		}
 	}
 	putchar ('\n');
-	return (0);
+				return (0);
 }
 
