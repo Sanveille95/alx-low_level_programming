@@ -1,11 +1,10 @@
-#include "main.h"
 #include <stdio.h>
 /**
   * main - Entry point
-  * prints the numbers from 1 to 100
-  * But for multiples of three print Fizz instead of the number
-  * and for the multiples of five print Buzz
-  * Return: Always 0 (success)
+  * Description: 'Prints numbers from 1 to 100, followed by a new line
+  * but for the multiples of three prints Fizz instead of the number
+  * and for the multiples of five prints Buzz
+  * Return: Always 0 (Success)
 */
 int main(void)
 {
