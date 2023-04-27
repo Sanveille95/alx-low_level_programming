@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
   * main - Entry point
   * Description: 'Prints numbers from 1 to 100, followed by a new line
