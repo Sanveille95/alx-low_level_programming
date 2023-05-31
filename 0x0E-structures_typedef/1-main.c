@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
  * main - check the code
- *
+ * init_dog - initializes a variable of type struct dog
  * Return: Always 0.
  */
 int main(void)

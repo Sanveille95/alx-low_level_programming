@@ -1,7 +1,5 @@
-#include <stdlib.h>
 #include "dog.h"
-#include <stddef.h>
-#include <string.h>
+#include <stdlib.h>
 /**
   * init_dog - initializes a variable of type struct dog
   * @d: pointer to the address to initialize
@@ -11,12 +9,10 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d)
+	if (d != NULL)
 	{
-		d->name = malloc(strlen(name) + 1);
-		strcpy(d->name, name);
-		d->owner = malloc(strlen(owner) + 1);
-		strcpy(d->owner, owner);
+		d->name = name;
 		d->age = age;
+		d->owner = owner;
 	}
 }
