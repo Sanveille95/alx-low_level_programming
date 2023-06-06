@@ -9,29 +9,23 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *tmp;
 	listint_t *new = malloc(sizeof(listint_t));
+	listint_t *end = *head;
 
 	if (new == NULL)
 		return (NULL);
 
 	new->n = n;
-	new->next = *head;
+	new->next = NULL;
 
-	/* if the linked list is empty, new node will be the head */
 	if (*head == NULL)
 	{
 		*head = new;
-	}
-	else
-	{
-		while (tmp->next != NULL)
-		{
-			tmp = tmp->next;
-		}
-
-		tmp->next = new;
+		return (*head);
 	}
 
+	while (end->next != NULL)
+		end = end->next;
+	end->next = new;
 	return (*head);
 }
