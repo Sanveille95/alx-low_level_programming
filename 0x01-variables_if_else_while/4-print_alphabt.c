@@ -6,18 +6,17 @@
 */
 int main(void)
 {
-	int n = 97;
-
-	while (n <= 122)
+	char c;
+	
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (n == 101 || n == 113)
+		if (c != 'q' && c != 'e')
 		{
-			n++;
-			continue;
+			putchar(c);
 		}
-		putchar(n);
-		n++;
 	}
+	
 	putchar('\n');
+	
 	return (0);
 }
