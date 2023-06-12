@@ -31,7 +31,7 @@ void error_file(int file_from, int file_to, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, error;
+	int file_from, file_to, file_close;
 	int towrite, toread;
 	char buffer[1024];
 
@@ -57,15 +57,15 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 
-	error = close(file_from);
-	if (error == -1)
+	file_close = close(file_from);
+	if (file_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fp %d\n", file_from);
 		exit(100);
 	}
 
-	error = close(file_to);
-	if (error == -1)
+	file_close = close(file_to);
+	if (file_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fp %d\n", file_to);
 		exit(100);
