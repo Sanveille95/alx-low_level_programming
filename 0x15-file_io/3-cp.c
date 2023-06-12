@@ -79,7 +79,6 @@ int main(int argc, char *argv[])
 		}
 
 		toread = read(file_from, buffer, 1024);
-		file_to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (toread > 0);
 	free(buffer);
