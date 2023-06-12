@@ -25,15 +25,15 @@ char *create_buffer(char *file)
  * close_file - Closes file descriptors.
  * @fp: The file descriptor to be closed.
  */
-void close_file(int fp)
+void close_file(int fd)
 {
 	int count;
 
-	count = close(fp);
+	count = close(fd);
 
 	if (count == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
