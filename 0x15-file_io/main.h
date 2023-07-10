@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUF1024 (1024)
+#define FILE_USAGE "Usage: cp file_from file_to\n"
+#define READ_ERR "Error: Can't read from file %s\n"
+#define WRITE_ERR "Error: Can't write to %s\n"
+#define ERR_100 "Error: Can't close fd %d\n"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
